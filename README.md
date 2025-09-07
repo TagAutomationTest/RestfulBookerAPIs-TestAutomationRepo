@@ -41,7 +41,8 @@ Each API call is chained in a **Fluent Interface style** and logged into **Allur
 - **Testing Framework:** TestNG
 - **HTTP Client:** RestAssured
 - **Reporting:** Allure
-- **Schema Validation:** JSON Schema 
+- **Schema Validation:** JSON Schema
+- **Status Email:** jakarta.mail 
 
 ---
 
