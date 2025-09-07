@@ -7,9 +7,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.FilterableRequestSpecification;
 import io.restassured.specification.FilterableResponseSpecification;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-
 public class AllureRestAssuredFilter implements Filter {
 
     @Override
@@ -33,12 +30,8 @@ public class AllureRestAssuredFilter implements Filter {
         Allure.step("⬅ Response: " + response.getStatusCode(),
                 () -> {
                     Allure.addAttachment("Response Headers", response.getHeaders().toString());
-                    Allure.addAttachment(
-                            "Response Body",
-                            "application/json",
-                            Arrays.toString(response.getBody().asPrettyString().getBytes(StandardCharsets.UTF_8)),
-                            ".json"
-                    );
+                    Allure.addAttachment("Response Body", "application/json", response.getBody().asPrettyString(), "json");
+
                 }
         );
 

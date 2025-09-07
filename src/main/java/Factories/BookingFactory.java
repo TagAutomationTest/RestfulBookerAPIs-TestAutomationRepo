@@ -26,7 +26,6 @@ public class BookingFactory {
         }
     }
 
-    @Step ("Prepare Payload for Booking API")
     public static BookingDto getBooking(String scenarioKey) {
         try {
             mapper = new ObjectMapper();

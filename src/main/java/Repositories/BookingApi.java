@@ -25,7 +25,9 @@ public class BookingApi {
 
     public BookingApi validateBookingIsCreated() {
         Validations.validateEquals(response.statusCode(), 200, "booking not created");
-        Validations.validateTrue(matchesJsonSchemaInClasspath("Schema/create-booking-schema.json").matches(response.getBody().asString()), "Response does not match schema!");
+        Validations.validateTrue(matchesJsonSchemaInClasspath("Schema/create-booking-schema.json")
+                .matches(response.getBody().asString()),
+                "Response does not match schema!");
 
         return this;
     }

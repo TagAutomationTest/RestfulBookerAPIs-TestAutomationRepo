@@ -7,18 +7,22 @@
     <name>Archetype - restful-bookerApiTest</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
         <log4j.version>2.24.3</log4j.version>
         <allure.version>2.29.1</allure.version>
         <commons-io.version>2.18.0</commons-io.version>
+        <jakarta.version>2.0.1</jakarta.version>
+        <lombok.version>1.18.38</lombok.version>
+        <json-schema-validator.version>5.5.6</json-schema-validator.version>
+        <jackson-databind.version>2.20.0</jackson-databind.version>
+        <rest-assured.version>5.5.6</rest-assured.version>
+        <testng.version>7.11.0</testng.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>jakarta.mail</artifactId>
-            <version>2.0.1</version> <!-- Latest stable version as of now -->
+            <version>${jakarta.version}</version> <!-- Latest stable version as of now -->
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -54,29 +58,29 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.38</version>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
-            <version>5.5.6</version>
+            <version>${json-schema-validator.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.15.2</version>
+            <version>${jackson-databind.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>5.5.6</version>
+            <version>${rest-assured.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.11.0</version>
+            <version>${testng.version}</version>
         </dependency>
     </dependencies>
 </project>

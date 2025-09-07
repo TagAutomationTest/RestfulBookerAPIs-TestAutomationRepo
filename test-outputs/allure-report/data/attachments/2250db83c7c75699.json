@@ -1,0 +1,14 @@
+{
+    "bookingid": 4055,
+    "booking": {
+        "firstname": "Ahmed_2abb2f",
+        "lastname": "Salama_1757257604285",
+        "totalprice": 150,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2025-09-01",
+            "checkout": "2025-09-10"
+        },
+        "additionalneeds": "Breakfast"
+    }
+}
