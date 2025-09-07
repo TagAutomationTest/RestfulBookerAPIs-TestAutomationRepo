@@ -1,0 +1,31 @@
+{
+  "validBooking": {
+    "firstname": "Ahmed",
+    "lastname": "Salama",
+    "totalprice": 150,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-09-01",
+      "checkout": "2025-09-10"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  "missingDates": {
+    "firstname": "Jane",
+    "lastname": "Smith",
+    "totalprice": 200,
+    "depositpaid": false,
+    "additionalneeds": "Lunch"
+  },
+  "invalidPrice": {
+    "firstname": "Alex",
+    "lastname": "Brown",
+    "totalprice": -50,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-10-01",
+      "checkout": "2025-10-05"
+    },
+    "additionalneeds": "Dinner"
+  }
+}

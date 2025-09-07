@@ -1,0 +1,2 @@
+Accept=*/*
+Content-Type=application/json

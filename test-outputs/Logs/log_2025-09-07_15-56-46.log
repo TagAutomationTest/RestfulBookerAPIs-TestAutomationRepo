@@ -1,0 +1,23 @@
+[DEBUG] - [07-09-2025 15:56:46] [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\CM\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml"
+[INFO] - [07-09-2025 15:56:46] [main] [Listners.TestNGListeners] - Test Execution started
+[INFO] - [07-09-2025 15:56:46] [main] [Utils.PropertiesUtils] - Loading Properties File Data
+[INFO] - [07-09-2025 15:56:46] [main] [Utils.FilesUtils] - Directory already exists: test-outputs\allure-results
+[INFO] - [07-09-2025 15:56:46] [main] [Utils.FilesUtils] - Directory already exists: test-outputs\Logs
+[INFO] - [07-09-2025 15:56:46] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\CM\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+[INFO] - [07-09-2025 15:56:47] [main] [Listners.TestNGListeners] - 🚀 Starting test:  testBookingLifecycle
+[INFO] - [07-09-2025 15:56:51] [main] [Utils.AllureUtils] - Logs attached to Allure report
+[INFO] - [07-09-2025 15:56:51] [main] [Listners.TestNGListeners] - Test case testBookingLifecycle passed
+[INFO] - [07-09-2025 15:56:51] [main] [Listners.TestNGListeners] - ===== Execution Summary =====
+[INFO] - [07-09-2025 15:56:51] [main] [Listners.TestNGListeners] - Total Passed: 1
+[INFO] - [07-09-2025 15:56:51] [main] [Listners.TestNGListeners] - Total Failed: 0
+[INFO] - [07-09-2025 15:56:51] [main] [Listners.TestNGListeners] - Total Skipped: 0
+[INFO] - [07-09-2025 15:56:51] [main] [Listners.TestNGListeners] - Test Execution finished
+[INFO] - [07-09-2025 15:56:51] [main] [Utils.EmailUtil] - Sending test Status by email ...........> Started 
+[INFO] - [07-09-2025 15:56:53] [main] [Utils.EmailUtil] - Report email sent successfully.
+[INFO] - [07-09-2025 15:56:53] [main] [Listners.TestNGListeners] - Generating and serving Allure report...
+[INFO] - [07-09-2025 15:56:53] [main] [Utils.AllureUtils] - Generating Allure report...
+[INFO] - [07-09-2025 15:56:56] [main] [Utils.AllureUtils] - Allure report generated successfully.
+[INFO] - [07-09-2025 15:56:56] [main] [Utils.AllureUtils] - Serving Allure report...
+[INFO] - [07-09-2025 15:56:56] [main] [Utils.AllureUtils] - Allure report is being served.

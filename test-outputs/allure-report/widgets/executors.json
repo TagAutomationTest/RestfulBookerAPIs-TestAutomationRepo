@@ -1,0 +1,1 @@
+[{"name":"Local Run","type":"Maven","url":"http://localhost:8080/job/my-tests","buildOrder":1,"buildName":"Build #1","buildUrl":"http://localhost:8080/job/my-tests/1","reportName":"Allure Test Report","reportUrl":"http://localhost:8080/allure-report/"}]

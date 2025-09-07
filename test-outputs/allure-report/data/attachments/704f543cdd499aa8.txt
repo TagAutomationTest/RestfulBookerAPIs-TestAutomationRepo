@@ -1,0 +1,1 @@
+{"firstname":"Ahmed_3b84da","lastname":"Salama_1757249809409","totalprice":150,"depositpaid":true,"bookingdates":{"checkin":"2025-09-01","checkout":"2025-09-10"},"additionalneeds":"Breakfast"}

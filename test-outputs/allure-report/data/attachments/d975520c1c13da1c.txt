@@ -1,0 +1,9 @@
+[DEBUG] - [07-09-2025 15:56:46] [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\CM\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml"
+[INFO] - [07-09-2025 15:56:46] [main] [Listners.TestNGListeners] - Test Execution started
+[INFO] - [07-09-2025 15:56:46] [main] [Utils.PropertiesUtils] - Loading Properties File Data
+[INFO] - [07-09-2025 15:56:46] [main] [Utils.FilesUtils] - Directory already exists: test-outputs\allure-results
+[INFO] - [07-09-2025 15:56:46] [main] [Utils.FilesUtils] - Directory already exists: test-outputs\Logs
+[INFO] - [07-09-2025 15:56:46] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\CM\AppData\Local\JetBrains\IdeaIC2023.2\temp-testng-customsuite.xml
+
+[INFO] - [07-09-2025 15:56:47] [main] [Listners.TestNGListeners] - 🚀 Starting test:  testBookingLifecycle
