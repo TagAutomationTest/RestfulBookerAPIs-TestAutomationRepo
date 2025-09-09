@@ -4,10 +4,10 @@ import Repositories.BookingApi;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners({TestNGListeners.class})
+//@Listeners({TestNGListeners.class})
 public class updateBookingTests {
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = {"regression"})
     public void updateBookingWithoutAuthorization() {
         new BookingApi()
                 .createBooking(BookingFactory.getCreatedBooking("validBooking"))
@@ -16,7 +16,7 @@ public class updateBookingTests {
                 .validateAuthResponse(403, "Forbidden");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2 ,groups = {"regression"})
     public void updateBookingWithInvalidToken() {
         new BookingApi()
                 .createBooking(BookingFactory.getCreatedBooking("validBooking"))
@@ -25,7 +25,7 @@ public class updateBookingTests {
                 .validateAuthResponse(403, "Forbidden");
     }
 
-    // @Test(priority = 3)
+    // @Test(priority = 3 ,groups = {"regression"})
     public void updateBookingWithExpiredToken() {
         new BookingApi()
                 .createBooking(BookingFactory.getCreatedBooking("validBooking"))
@@ -34,7 +34,7 @@ public class updateBookingTests {
                 .validateAuthResponse(403, "Forbidden");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4 ,groups = {"regression" ,"smoke","sanity"})
     public void updateValidBooking() {
         new BookingApi()
                 .createBooking(BookingFactory.getCreatedBooking("validBooking"))

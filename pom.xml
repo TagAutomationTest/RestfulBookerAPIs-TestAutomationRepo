@@ -7,6 +7,10 @@
     <name>Archetype - restful-bookerApiTest</name>
     <url>http://maven.apache.org</url>
     <properties>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <log4j.version>2.24.3</log4j.version>
         <allure.version>2.29.1</allure.version>
         <commons-io.version>2.18.0</commons-io.version>
@@ -16,6 +20,9 @@
         <jackson-databind.version>2.20.0</jackson-databind.version>
         <rest-assured.version>5.5.6</rest-assured.version>
         <testng.version>7.11.0</testng.version>
+        <mavenSurfire.version>3.5.3</mavenSurfire.version>
+        <allure_maven.version>2.15.2</allure_maven.version>
+        <mavencompiler.version>3.14.0</mavencompiler.version>
     </properties>
 
     <dependencies>
@@ -83,4 +90,49 @@
             <version>${testng.version}</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${mavencompiler.version}</version>
+                <configuration>
+                    <release>24</release>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <!-- Maven Surefire Plugin to run tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${mavenSurfire.version}</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>regression.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+            <!-- Allure Maven Plugin for reporting -->
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure_maven.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

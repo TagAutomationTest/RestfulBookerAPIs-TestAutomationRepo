@@ -1,13 +1,10 @@
 import Factories.BookingFactory;
-import Listners.TestNGListeners;
 import Repositories.BookingApi;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners({TestNGListeners.class})
 public class createBookingTests {
 
-    @Test(priority = 5)
+    @Test(priority = 5 ,groups = {"regression" ,"smoke","sanity"})
     public void createValidBooking() {
         new BookingApi()
                 .createBooking(BookingFactory.getCreatedBooking("validBooking"))
@@ -15,14 +12,14 @@ public class createBookingTests {
                 .validateBookingIsCreated();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = {"regression"})
     public void createBookingWithoutBookingDates() {
         new BookingApi()
                 .createBooking(BookingFactory.getCreatedBooking("missingDates"))
                 .validateBookingIsNotCreated(500, "Internal Server Error");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2 ,groups = {"regression"})
     public void createBookingByInvalidPrice() {
         new BookingApi()
                 .createBooking(BookingFactory.getCreatedBooking("missingPrice"))
@@ -30,7 +27,7 @@ public class createBookingTests {
     }
 
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"regression"})
     public void createBookingByEmptyPayload() {
         new BookingApi()
                 .createBooking(BookingFactory.getCreatedBooking("emptyPayload"))

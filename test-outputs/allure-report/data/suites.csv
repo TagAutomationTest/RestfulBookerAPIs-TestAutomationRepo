@@ -1,4 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","935","updateBookingWithInvalidToken","Default Suite","2025-09-09","passed","2025-09-09","updateBookingTests","restful-bookerApiTest","updateBookingTests","updateBookingWithInvalidToken"
-"","2587","updateBookingWithoutAuthorization","Default Suite","2025-09-09","passed","2025-09-09","updateBookingTests","restful-bookerApiTest","updateBookingTests","updateBookingWithoutAuthorization"
-"","1848","updateValidBooking","Default Suite","2025-09-09","passed","2025-09-09","updateBookingTests","restful-bookerApiTest","updateBookingTests","updateValidBooking"
+"","1849","updateValidBooking","RestfulBookerSuite","2025-09-09","passed","2025-09-09","updateBookingTests","RegressionTests","updateBookingTests","updateValidBooking"
+"","2628","createValidBooking","RestfulBookerSuite","2025-09-09","passed","2025-09-09","createBookingTests","RegressionTests","createBookingTests","createValidBooking"
+"","6389","testBookingLifecycle","RestfulBookerSuite","2025-09-09","passed","2025-09-09","e2e","RegressionTests","e2e","testBookingLifecycle"
