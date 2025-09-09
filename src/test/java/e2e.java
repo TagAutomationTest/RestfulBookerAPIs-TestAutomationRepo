@@ -10,10 +10,18 @@ public class e2e {
     @Test
     public void testBookingLifecycle() {
         new BookingApi()
-                .createBooking(BookingFactory.getBooking("validBooking"))
+                .createBooking(BookingFactory.getCreatedBooking("validBooking"))
+                .validateCreateBookingResponse()
                 .validateBookingIsCreated()
-                .updateBooking(BookingFactory.getBooking("validBooking"))
+                .updateBooking(BookingFactory.getUpdatedBooking("validBooking"))
+                .validateUpdateBookingResponse()
                 .validateBookingIsUpdated()
+                .partialUpdateBooking(BookingFactory.getPatchedBooking("updateName"))
+                .validatePatchBookingResponse()
+                .validateBookingIsPatched("updateName")
+                .partialUpdateBooking(BookingFactory.getPatchedBooking("updateDates"))
+                .validatePatchBookingResponse()
+                .validateBookingIsPatched("updateDates")
                 .deleteBooking()
                 .validateBookingIsDeleted();
     }

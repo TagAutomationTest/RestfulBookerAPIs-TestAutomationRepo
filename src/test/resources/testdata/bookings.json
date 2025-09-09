@@ -4,10 +4,6 @@
     "lastname": "Salama",
     "totalprice": 150,
     "depositpaid": true,
-    "bookingdates": {
-      "checkin": "2025-09-01",
-      "checkout": "2025-09-10"
-    },
     "additionalneeds": "Breakfast"
   },
   "missingDates": {
@@ -17,15 +13,15 @@
     "depositpaid": false,
     "additionalneeds": "Lunch"
   },
-  "invalidPrice": {
+  "missingPrice": {
     "firstname": "Alex",
     "lastname": "Brown",
-    "totalprice": -50,
     "depositpaid": true,
     "bookingdates": {
       "checkin": "2025-10-01",
       "checkout": "2025-10-05"
     },
     "additionalneeds": "Dinner"
-  }
+  },
+  "emptyPayload": {}
 }

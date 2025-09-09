@@ -1,5 +1,6 @@
 package Pojos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,8 +14,8 @@ public class BookingDto {
 
     private String firstname;
     private String lastname;
-    private int totalprice;
-    private boolean depositpaid;
+    private Integer totalprice;
+    private Boolean depositpaid;
     private BookingDates bookingdates;
     private String additionalneeds;
 
