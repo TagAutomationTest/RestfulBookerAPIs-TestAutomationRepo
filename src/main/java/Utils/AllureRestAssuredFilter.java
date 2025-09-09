@@ -1,4 +1,4 @@
-package Listners;
+package Utils;
 
 import io.qameta.allure.Allure;
 import io.restassured.filter.Filter;
@@ -20,6 +20,8 @@ public class AllureRestAssuredFilter implements Filter {
         Allure.step("➡ Request: " + requestSpec.getMethod() + " " + requestSpec.getURI(),
                 () -> {
                     Allure.addAttachment("Request Headers", requestSpec.getHeaders().toString());
+                    // log request cookies (this includes "token")
+                    Allure.addAttachment("Request Cookies", requestSpec.getCookies().toString());
                     if (requestSpec.getBody() != null) {
                         Allure.addAttachment("Request Body", "application/json", requestSpec.getBody().toString(), "json");
                     }

@@ -2,6 +2,7 @@ package Repositories;
 
 import Pojos.BookingDto;
 import Utils.Validations;
+import clients.RestClient;
 import io.restassured.response.Response;
 
 import java.util.Map;
@@ -69,11 +70,9 @@ public class BookingApi {
         return this;
     }
 
-    public BookingApi updateBooking(BookingDto updatedDto) {
+    public BookingApi updateBooking(BookingDto updatedDto ,String authType) {
         this.updatedBookingDto = updatedDto; // keep original dto for later validation
-        response = given()
-                .contentType("application/json")
-                .cookie("token", AuthApi.generateToken()) // Token from auth API
+        response = RestClient.withAuth(authType)
                 .body(updatedDto)
                 .log().all()
                 .when()
@@ -82,7 +81,16 @@ public class BookingApi {
         return this;
     }
 
+    public BookingApi validateAuthResponse(int expectedStatusCode, String expectedMessage) {
+        Validations.validateEquals(expectedStatusCode, response.getStatusCode(),
+                "Expected status code " + expectedStatusCode + " but got " + response.getStatusCode());
+        if (expectedMessage != null && !expectedMessage.isEmpty()) {
+            Validations.validateTrue( response.asString().contains(expectedMessage),
+                    "Expected response to contain message: " + expectedMessage + "\nActual: " +  response.asString());
+        }
 
+        return this; // chainable
+    }
     public BookingApi getBookingById() {
         response = given()
                 .when()

@@ -25,5 +25,15 @@ public class AuthApi {
                 .extract().jsonPath().getString("token");
 
     }
+
+    public static String getExpiredToken() {
+        // First generate token A
+        String tokenA = generateToken();
+
+        // Then generate token B → invalidates token A
+        generateToken();
+
+        return tokenA; // return the expired one
+    }
 }
 

@@ -29,7 +29,6 @@ public class TestNGListeners implements IExecutionListener, ITestListener, IInvo
         FilesUtils.cleanDirectory(logs);
         FilesUtils.createDirectory(allure_results);
         FilesUtils.createDirectory(logs);
-        //AllureUtils.createAllureEnvironmentFile();
         AllureUtils.copyAll();
         try {
             AllureUtils.killAllureOnlyOnPort(Integer.parseInt(PropertiesUtils.getPropertyValue("portNumber")));
@@ -81,19 +80,6 @@ public class TestNGListeners implements IExecutionListener, ITestListener, IInvo
         }
     }
 
-    /*
-    @Override
-    public void onTestStart(ITestResult result) {
-        String description = result.getMethod().getDescription();
-        String methodName = result.getMethod().getMethodName();
-
-        if (description != null && !description.isEmpty()) {
-            AllureUtils.logStep(description);
-        } else {
-            AllureUtils.logStep("Start test: " + methodName);
-        }
-    }
-*/
     @Override
     public void onTestSuccess(ITestResult result) {
         LogsUtil.info("Test case", result.getName(), "passed");

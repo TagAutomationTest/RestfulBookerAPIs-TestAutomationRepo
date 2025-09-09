@@ -4,11 +4,8 @@ import Pojos.BookingDto;
 import Utils.DateUtils;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.qameta.allure.Step;
 
 import java.io.InputStream;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -84,7 +81,7 @@ public class BookingFactory {
             patchPayload.put("additionalneeds", "Late Checkout");
         }
         if (scenarioKey.equalsIgnoreCase("updateDates")) {
-            bookingDates=DateUtils.getBookingDates(2, 4);
+            bookingDates = DateUtils.getBookingDates(2, 4);
             patchPayload.put("bookingdates", bookingDates);
         }
         return patchPayload;

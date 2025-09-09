@@ -13,7 +13,7 @@ public class e2e {
                 .createBooking(BookingFactory.getCreatedBooking("validBooking"))
                 .validateCreateBookingResponse()
                 .validateBookingIsCreated()
-                .updateBooking(BookingFactory.getUpdatedBooking("validBooking"))
+                .updateBooking(BookingFactory.getUpdatedBooking("validBooking"),"valid")
                 .validateUpdateBookingResponse()
                 .validateBookingIsUpdated()
                 .partialUpdateBooking(BookingFactory.getPatchedBooking("updateName"))
